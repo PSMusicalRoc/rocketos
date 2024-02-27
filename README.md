@@ -8,7 +8,7 @@ All basic steps and launching off points came from [Philipp Oppermann's incredib
 
 ```
 rustup install nightly
-rustup default nightly
+rustup override set nightly
 rustup component add llvm-tools-preview
 cargo install bootimage
 ```
