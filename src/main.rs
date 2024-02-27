@@ -6,6 +6,7 @@
 
 use core::panic::PanicInfo;
 use rocket_os::println;
+use rocket_os::serial_println;
 
 #[allow(unused_imports)]
 
@@ -17,8 +18,12 @@ pub extern "C" fn _start() -> ! {
     // Printing hello world to the screen :)
     println!("Welcome to RocketOS Version {}!", env!("CARGO_PKG_VERSION"));
 
+    rocket_os::init();
+
     #[cfg(test)]
     test_main();
+
+    println!("No crash!");
 
     loop {}
 }
