@@ -1,0 +1,11 @@
+[package]
+name = "rocket_os"
+version = "0.0.1"
+edition = "2021"
+authors = ["Tim Bishop <timbishop.csci@gmail.com>"]
+
+[profile.dev]
+panic = "abort" # disable stack unwinding on panic
+
+[profile.release]
+panic = "abort" # disable stack unwinding on panic
