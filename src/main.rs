@@ -6,7 +6,6 @@
 
 use core::panic::PanicInfo;
 use rocket_os::println;
-use rocket_os::serial_println;
 
 #[allow(unused_imports)]
 
@@ -22,8 +21,6 @@ pub extern "C" fn _start() -> ! {
 
     #[cfg(test)]
     test_main();
-
-    println!("No crash!");
 
     loop {}
 }
