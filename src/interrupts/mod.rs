@@ -80,9 +80,10 @@ extern "x86-interrupt" fn keyboard_handler(
     let scancode: u8 = unsafe { port.read() };
     if let Ok(Some(key_event)) = keyboard.add_byte(scancode) {
         if let Some(key) = keyboard.process_keyevent(key_event) {
+            // print!("{}", scancode);
             match key {
                 DecodedKey::Unicode(character) => print!("{}", character),
-                DecodedKey::RawKey(key) => print!("{:?}", key)
+                DecodedKey::RawKey(key) => print!("Unicode: {:?}", key)
             };
         }
     }
