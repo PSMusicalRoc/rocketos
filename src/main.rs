@@ -18,7 +18,7 @@ pub extern "C" fn _start() -> ! {
     println!("Welcome to RocketOS Version {}!", env!("CARGO_PKG_VERSION"));
 
     rocket_os::init();
-
+    
     #[cfg(test)]
     test_main();
 

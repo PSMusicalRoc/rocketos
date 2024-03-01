@@ -2,7 +2,6 @@
 use core::fmt::Write;
 use lazy_static::lazy_static;
 use spin::Mutex;
-use x86_64::instructions;
 
 lazy_static!{
     pub static ref WRITER: Mutex<Writer> = Mutex::new(Writer {
